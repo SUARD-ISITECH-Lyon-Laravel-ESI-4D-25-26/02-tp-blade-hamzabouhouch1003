@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $usersCount = User::count();
 
-        return view('users');
+        return view('users', compact('usersCount')); // ajouter compact()
     }
 
     // TÂCHE 2 : modifiez la vue (view) pour que l'alerte JavaScript ne s'affiche pas
